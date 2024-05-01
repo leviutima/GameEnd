@@ -4,78 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-            background-color: aquamarine;
-        }
-        .player {
-            width: 10px;
-            height: 10px;
-            position: absolute;
-        }
-        .playerConfig {
-            width: 130px;
-        }
-    </style>
-    <script>
-        var dx;
-        var dy;
-        var px;
-        var py;
-        var vel;
-        var obj;
-        var tmp;
-        function inicia() {
-            dx = 0;
-            dy = 0;
-            px = 0;
-            py = 0;
-            vel = 5;
-            obj = document.getElementById("player");
-            document.addEventListener('keydown', teclaDw);
-            document.addEventListener('keyup', teclaUp);
-            tmp = setInterval(enterFrame, 20);
-        }
-
-        function teclaDw(event) {
-            var tecla = event.keyCode;
-            if (tecla == 37) {
-                dx = -1;
-            } else if (tecla == 38) {
-                dy = -1;
-            } else if (tecla == 39) {
-                dx = 1;
-            } else if (tecla == 40) {
-                dy = 1;
-            }
-        }
-
-        function teclaUp(event) {
-            var tecla = event.keyCode;
-            if (tecla == 37) {
-                dx = 0;
-            } else if (tecla == 38) {
-                dy = 0;
-            } else if (tecla == 39) {
-                dx = 0;
-            } else if (tecla == 40) {
-                dy = 0;
-            }
-        }
-
-        function enterFrame() {
-            px += dx * vel;
-            py += dy * vel;
-            obj.style.left = px + 'px';
-            obj.style.top = py + 'px';
-        }
-
-        window.addEventListener('load', inicia);
-    </script>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
 </head>
 <body>
-    <div class="player" id="player">
-        <img src="Bluezão_Cagando-removebg-preview (1).png" class="playerConfig">
-    </div>
+    <section class="cenario">
+        <div id="player">
+            <img src="images/bluezaoPlayer.png" class="playerConfig">
+        </div>
+        <div class="obstaculo"></div>
+        <div class="obstaculo2"></div>
+    </section>
 </body>
 </html>

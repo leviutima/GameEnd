@@ -1,9 +1,35 @@
 body {
-    background-color: blue;
+    background-color: beige;
+    margin: 0;
 }
 
-.player {
-    width: 100px;
-    height: 100px;
-    background-color: aliceblue;
+.playerConfig {
+    width: 125px;
+    height: 90px;
+    position: absolute;
+}
+
+.cenario {
+
+}
+
+.obstaculo {
+    width: 50px;
+    height: 500px;
+    background-color: black;
+    margin: 0 0 0 15%;
+}
+
+.obstaculo2 {
+    width: 50px;
+    height: 240px;
+    background-color: black;
+    margin: 10% 0 0 15%;
+}
+
+.obstaculo3 {
+    width: 50px;
+    height: 240px;
+    background-color: black;
+    margin: 10% 0 0 15%;
 }
